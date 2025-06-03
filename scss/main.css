@@ -112,4 +112,72 @@ input[type=file] {
 html, body {
   font-family: var(--font-main);
   color: var(--text-color);
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 40px;
+  background-color: var(--footer-bg);
+  background-image: url(./../../img/header/header-bg.jpg);
+  background-size: cover;
+  aspect-ratio: 1440/1084;
+  color: var(--header-text-color);
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .header {
+    background-image: url(./../../img/header/header-bg@2x.jpg);
+  }
+}
+.header a {
+  color: var(--header-text-color);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  gap: 20px;
+}
+
+.nav__logo {
+  align-self: center;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.28px;
+  text-transform: capitalize;
+}
+
+.nav-list {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  font-weight: 500;
+  font-style: 18px;
+}
+
+.cart {
+  align-self: center;
+  justify-self: end;
+  position: relative;
+}
+
+.cart__count {
+  position: absolute;
+  top: 3px;
+  right: -6px;
+  display: inline-block;
+  height: 25px;
+  padding: 0 6px;
+  border-radius: 40px;
+  background-color: var(--accent);
+  font-weight: 700;
+  line-height: 25px;
+  font-family: var(--font-cards);
 }/*# sourceMappingURL=main.css.map */
