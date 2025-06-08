@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     padding-top: 40px;
 
     background-color: var(--footer-bg);
@@ -37,10 +38,37 @@
 .header__content p {
     margin: 0 auto;
     max-width: 606px;
+    opacity: 0.8;
     font-size: 24px;
     line-height: 160%;
 }
 
 .header__search {
     margin: 45px auto 0;
+}
+
+// Dots
+
+.header__dot-sofa {
+    position: absolute;
+    left: calc(296 * 100% / (1440 - 30));
+    top: calc(685 * 100% / (1084 - 9));
+}
+
+.header__dot-vase {
+    position: absolute;
+    left: calc(114 * 100% / 1410);
+    top: calc(754 * 100% / 1075);
+}
+
+.header__dot-item {
+    position: absolute;
+    left: calc(810 * 100% / 1440);
+    top: calc(787 * 100% / 1084);
+}
+
+.header__dot-wall {
+    position: absolute;
+    right: calc(46 * 100% / 1440);
+    top: calc(821 * 100% / 1084);
 }
