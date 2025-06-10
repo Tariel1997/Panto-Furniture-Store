@@ -51,20 +51,23 @@
 
 .header__dot-sofa {
     position: absolute;
-    left: calc(296 * 100% / (1440 - 30));
-    top: calc(685 * 100% / (1084 - 9));
+    left: calc(296 * 100% / 1440);
+    top: calc(685 * 100% / 1084);
+    
 }
 
 .header__dot-vase {
     position: absolute;
     left: calc(114 * 100% / 1410);
     top: calc(754 * 100% / 1075);
+    transform: translate(-50%, -50%);
 }
 
 .header__dot-item {
     position: absolute;
     left: calc(810 * 100% / 1440);
     top: calc(787 * 100% / 1084);
+    transform: translate(-50%, -50%);
 }
 
 .header__dot-wall {
