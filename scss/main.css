@@ -427,8 +427,6 @@ body {
 
 .products__slider {
   margin-bottom: 60px;
-  display: flex;
-  justify-content: center;
 }
 
 .products__link {
@@ -571,6 +569,32 @@ body {
 }
 
 .slider {
+  position: relative;
+}
+
+.slider__btn {
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1;
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.06);
+  background: #fff;
   display: flex;
-  gap: 42px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__btn--prev {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--next {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
 }/*# sourceMappingURL=main.css.map */
