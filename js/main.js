@@ -53,3 +53,39 @@ const swiper = new Swiper(".swiper", {
     prevEl: "#sliderPrev",
   },
 });
+
+// Tabs
+
+const tabBtns = document.querySelectorAll('[data-tab]');
+
+for (let btn of tabBtns) {
+  btn.addEventListener('click', function () {
+
+    // Removing active class from all buttons
+    for (let btn of tabBtns) {
+      btn.classList.remove('tab-controls__btn--active');
+    }
+
+    // Adding active class to the clicked button
+    this.classList.add('tab-controls__btn--active');
+
+    // Hiding all tab contents and showing the one that matches the clicked button
+    const tabsProducts = document.querySelectorAll('[data-tab-value]');
+    for (let product of tabsProducts) {
+
+      //Checking if all products are loaded
+      if (this.dataset.tab === 'all') {
+        product.classList.remove('none');
+      } else {
+        if (product.dataset.tabValue === this.dataset.tab) {
+          product.classList.remove('none');
+        } else {
+          product.classList.add('none');
+        }
+      }
+    }
+
+    // Updating Swiper to reflect the changes in the DOM
+    swiper.update()
+  })
+}
