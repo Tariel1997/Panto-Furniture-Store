@@ -4,6 +4,12 @@ const infoHints = document.querySelectorAll(".info-hint");
 for (let btn of infoBtns) {
   btn.addEventListener("click", function (e) {
     e.stopPropagation();
+    // Hide all other hints
+    for (let hint of infoHints) {
+      hint.classList.add("none");
+    }
+
+    // Show current hint
     this.parentNode.querySelector(".info-hint").classList.toggle("none");
   });
 }
@@ -29,23 +35,23 @@ const swiper = new Swiper(".swiper", {
   freeMode: true,
 
 
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 42,
 
-  // breakpoints: {
-  //   640: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   768: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40,
-  //   },
-  //   1024: {
-  //     slidesPerView: 5,
-  //     spaceBetween: 50,
-  //   },
-  // },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    920: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1230: {
+      slidesPerView: 4,
+      spaceBetween: 42,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -88,4 +94,19 @@ for (let btn of tabBtns) {
     // Updating Swiper to reflect the changes in the DOM
     swiper.update()
   })
+}
+
+
+//Mobile Nav
+
+const mobileNavOpenBtn = document.querySelector('#open-mobile-nav-btn')
+const mobileNavCloseBtn = document.querySelector('#close-mobile-nav-btn')
+const mobileNav = document.querySelector('#mobile-nav')
+
+mobileNavOpenBtn.onclick = function () {
+  mobileNav.classList.add("mobile-nav-wrapper--open");
+}
+
+mobileNavCloseBtn.onclick = function () {
+  mobileNav.classList.remove("mobile-nav-wrapper--open");
 }
