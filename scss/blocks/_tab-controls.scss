@@ -32,4 +32,9 @@
             background-color: #fff;
         }
     }
+
+    @include mobile () {
+        font-size: 16px;
+        max-width: 60px;
+    }
 }

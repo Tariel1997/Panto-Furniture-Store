@@ -9,6 +9,10 @@
 
     font-weight: 500;
     font-style: 18px;
+
+    @include tablet() {
+        display: none;
+    }
 }
 
 .nav-list__link {
